@@ -35,7 +35,7 @@ function transformAndSave(files) {
 
   changed.forEach(function (x) { 
     console.log('"%s" will be updated', x.path);
-    fs.writeFileSync(x.path, x.data, 'utf8'); 
+    fs.writeFileSync(x.path + ".new", x.data, 'utf8'); // adding .new
   });
 }
 
